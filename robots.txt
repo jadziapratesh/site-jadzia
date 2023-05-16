@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://jadzia.golfinho.top/sitemap.xml

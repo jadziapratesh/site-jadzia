@@ -1,0 +1,309 @@
+body {
+  background: #342C3D;
+  font-family: "Permanent Marker";
+  overflow: hidden !important;
+}
+
+body, a {
+  color: rgb(94, 94, 92);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.caxinha {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 95%;
+  width: 100%;
+}
+
+.flex {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  padding: 0 1rem;
+  font-size: 2.5rem;
+  background-image: -webkit-linear-gradient(#267b9c 0%, #66cef8 46%, #ffffff 50%, #32120E 54%, #F5A9B8 58%, #c9556c 90%, #ee64b9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+}
+
+.item:hover::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 1rem;
+  background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-size: 30rem;
+  padding-right: 5rem;
+  -webkit-text-stroke: 0;
+  -webkit-animation-name: chrome_effect;
+          animation-name: chrome_effect;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.letterboxd:hover::before {
+  content: "LETTERBOXD";
+}
+
+.spotify:hover::before {
+  content: "SPOTIFY";
+}
+
+.steam:hover::before {
+  content: "STEAM";
+}
+
+.telegram:hover::before {
+  content: "TELEGRAM";
+}
+
+.twitter:hover::before {
+  content: "TWITTER";
+}
+
+@keyframes chrome_effect {
+  0% {background-position: -25rem;}
+  100% {background-position: 35rem;}
+}
+
+.nome {
+  top: 2rem;
+  font-size: 8em;
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  width: 52rem;
+  z-index: 3;
+  text-align: center;
+  background-image: -webkit-linear-gradient(#f5a9b8 100%, #ffffff 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(0.125rem 0.125rem 1.25rem #9D00D4);
+          filter: drop-shadow(0.125rem 0.125rem 1.25rem #9D00D4);
+  -webkit-animation-name: move_nome;
+          animation-name: move_nome;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes move_nome {
+  0% {-webkit-transform: skew(-10deg, -15deg);}
+  100% {-webkit-transform: skew(-10deg, -10deg);}
+}
+
+/* Pra funcionar em celular em pé */
+@media only screen and (max-device-width: 600px) and (orientation: portrait) {
+  .nome {
+    padding: 3% 0;
+  }
+
+  .caxinha {
+    padding-top: 0;
+  }
+
+  .porta_bola {
+    margin-bottom: 6rem;
+  }
+
+  .flex {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -ms-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .item {
+    font-size: 500%;
+    margin-top: 4rem !important;
+  }
+}
+
+/* Pra funcionar em celular em ladinho */
+@media only screen and (max-device-width: 900px) and (orientation: landscape) {
+  body {
+    background-size: 155%;
+  }
+
+  .porta_bola {
+    height: calc(100% - 40%) !important;
+    width: calc(100% - 20%) !important;
+    transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    padding-bottom: 0 !important;
+    top: -5%;
+  }
+
+  .caxinha {
+    padding-top: 0;
+  }
+
+  .flex {
+    margin: 0 10%;
+  }
+
+  .item {
+    font-size: 250%;
+    margin-top: 1rem !important;
+  }
+}
+
+/* Pra funcionar em tablet em pé */
+@media only screen and (min-device-width: 700px) and (orientation: portrait) {
+  body {
+    background-size: 350%;
+  }
+
+  .caxinha {
+    padding-top: 0;
+  }
+
+  .flex {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -ms-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .item {
+    font-size: 400%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Pra funcionar em tablet em ladinho */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1400px) and (orientation: landscape) {
+  body {
+    background-size: 165%;
+  }
+
+  .flex {
+    margin: 0 5%;
+  }
+
+  .item {
+    font-size: 300%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 1400px) and (max-device-width: 1700px) {
+  .caxinha {
+    padding-top: calc(10% - 3rem);
+  }
+}
+
+body {
+  margin: 1.25rem auto;
+  background: #342C3D;
+}
+
+.porta_bola {
+  height: 19rem;
+  width: 52rem;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.circle {
+  background: repeating-linear-gradient(
+    180deg,
+    #5bcefa,
+    #5bcefa 1.25rem,
+    rgba(52, 44, 61, 0) 1.25rem,
+    rgba(52, 44, 61, 0) 2.5rem
+  );
+  -webkit-filter: drop-shadow(0 0 2rem #9D00D4);
+          filter: drop-shadow(0 0 2rem #9D00D4);
+  background-size: 2.5rem 2.5rem;
+  border-radius: 50%;
+  height: 19rem;
+  width: 19rem;
+  margin: 0 auto;
+  background-position-y: 0%;
+  animation: slide 4s infinite linear forwards;
+  -webkit-animation: slide 4s infinite linear forwards;
+  -moz-animation: slide 4s infinite linear forwards;
+}
+
+@keyframes slide {
+  0% {
+    background-position-y: 30%;
+  }
+  100% {
+    background-position-y: 0%;
+  }
+}
