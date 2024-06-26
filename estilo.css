@@ -115,10 +115,6 @@ p {
   content: "TELEGRAM";
 }
 
-.bsky:hover::before {
-  content: "BLUESKY";
-}
-
 @keyframes chrome_effect {
   0% {background-position: -25rem;}
   100% {background-position: 35rem;}
