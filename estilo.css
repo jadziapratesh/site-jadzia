@@ -122,6 +122,7 @@ p {
 
 .nome {
   font-size: 12em;
+  top: 0;
   position: absolute;
   font-family: 'Permanent Marker', cursive;
   width: 52rem;
