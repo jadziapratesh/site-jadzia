@@ -121,8 +121,7 @@ p {
 }
 
 .nome {
-  top: 2rem;
-  font-size: 8em;
+  font-size: 12em;
   position: absolute;
   font-family: 'Permanent Marker', cursive;
   width: 52rem;
@@ -155,10 +154,6 @@ p {
 
 /* Pra funcionar em celular em pé */
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
-  .nome {
-    padding: 3% 0;
-  }
-
   .caxinha {
     padding-top: 0;
   }
