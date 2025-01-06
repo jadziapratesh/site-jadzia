@@ -99,6 +99,10 @@ p {
           animation-iteration-count: infinite;
 }
 
+.bsky:hover::before {
+  content: "BLUESKY";
+}
+
 .letterboxd:hover::before {
   content: "LETTERBOXD";
 }
